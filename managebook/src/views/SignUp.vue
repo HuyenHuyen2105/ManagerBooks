@@ -7,8 +7,12 @@
             <span class="glyphicon glyphicon-locl">Đăng ký</span>
           </h2>
           <div class="panel-body">
+            <label>Tên</label>
+            <input type="text" v-model="name" />
             <label>Tài khoản</label>
             <input type="text" v-model="username" />
+            <label>Email</label>
+            <input type="email" v-model="email" />
             <label>Mật khẩu</label>
             <input type="password" v-model="password" />
             <div class="panel-footer">
