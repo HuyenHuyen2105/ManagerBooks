@@ -16,6 +16,7 @@ export default {
   components: {
     BookForm,
   },
+  
 
   data() {
     return {
@@ -25,24 +26,24 @@ export default {
   },
   methods: {
     async onAddBook(book) {
-      try {
-        await bookService.create(book);
-        this.message = "Liên hệ được cập nhật thành công.";
-      } catch (error) {
-        console.log(error);
+        try{
+          await bookService.create(book)
+        }catch(err){
+          console.log(err)
+        }
+        this.$router.push({name:'managebook'})
       }
     },
-  },
   created() {
     this.book = {
-      name: "",
+      name:"",
       img:"",
-      author: "",
-      suppiler: "",
-      publishing: "",
-      price: "",
-      favorite: "",
-    };
+      author:"",
+      supplier:"",
+      publishing:"",
+      price:"",
+      favorite:""
+    }
     this.message = "";
   },
 };

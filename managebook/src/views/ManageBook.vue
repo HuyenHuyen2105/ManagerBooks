@@ -16,13 +16,13 @@
       <p v-else>Không có quyển sách nào</p>
       <div class="mt-3 row justify-content-around align-items-center">
         <button class="btn btn-sm btn-primary" @click="refreshList()">
-          <i class="fas fa-redo" /> Làm mới
+          <ion-icon name="refresh-outline"></ion-icon> Làm mới
         </button>
         <button class="btn btn-sm btn-success" @click="goToAddContact">
-          <i class="fas fa-plus" /> Thêm mới
+          <ion-icon name="add-outline"></ion-icon> Thêm mới
         </button>
         <button class="btn btn-sm btn-danger" @click="onDeleteContacts">
-          <i class="fas fa-trash" /> Xóa tất cả
+          <ion-icon name="trash-outline"></ion-icon> Xóa tất cả
         </button>
       </div>
     </div>

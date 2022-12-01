@@ -46,20 +46,23 @@ export default {
       try {
         await bookService.update(book.id, book);
         this.message = "Liên hệ được cập nhật thành công.";
-        router.push({ name: "managebook" });
       } catch (error) {
         console.log(error);
       }
+      this.$router.push({ name: "managebook" });
+
     },
     async onDeleteContact(id) {
       if (confirm("Bạn muốn xóa liên hệ này?")) {
         try {
           await bookService.delete(id);
-          this.$router.push({ name: "managebook" });
+          
         } catch (error) {
           console.log(error);
         }
       }
+      this.$router.push({ name: "managebook"});
+
     },
   },
   created() {

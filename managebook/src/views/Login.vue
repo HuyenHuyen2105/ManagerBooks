@@ -25,20 +25,25 @@
 
 <script>
 import { userService } from "@/services/login.service";
-import axios from "axios";
+// import axios from "axios";
 export default {
   data() {
     return {
+      // login:[],
       username: "",
       password: "",
     };
   },
   methods: {
     async checkLogin() {
-      const response = await axios.get("username");
-      console.log(response);
+      // const response = await axios.post('http://localhost:3003',JSON.stringify({username,password}), {
+      //     headers: { "Content-Type": "application/json" },
+      //     withCredentials: true,
+      //   })
+      //   console.log(response.data)
+        console.log(this.username)
       // const auth = { username: this.username, password: this.password };
-      // let result = await userService.getLogin(this.username, this.password);
+      // let result = await userService.gtetLogin(this.username, this.password);
 
       // let result = await axios.get(
       //   `http://localhost:3003/api/login?username=${this.username}&password=${this.password}`

@@ -18,7 +18,7 @@ app
     .route("/api/user")
     .get(loginController.findAll)
     .post(loginController.create);
-
+app.route("api/user/login").post(loginController.findOne)
 app
     .route("/api/books")
     .get(bookController.findAll)

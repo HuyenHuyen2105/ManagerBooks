@@ -8,7 +8,9 @@
       <strong>Hình ảnh:</strong>
       <!-- <div class="images" v-viewer.static="{ inline: true }">
         <img v-for="src in images" :src="src" :key="src" />
+
       </div> -->
+    {{book.img}}
     </div>
     <div class="p-1">
       <strong>Tác giả:</strong>
@@ -28,8 +30,8 @@
     </div>
     <div class="p-1">
       <strong>Sách yêu thích:&nbsp;</strong>
-      <i v-if="book.favorite" class="fas fa-check" />
-      <i v-else class="fas fa-times" />
+      <ion-icon v-if="book.favorite" name="checkbox-outline"></ion-icon>
+      <ion-icon v-else name="close-outline"></ion-icon>
     </div>
   </div>
 </template>

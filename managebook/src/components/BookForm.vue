@@ -72,7 +72,7 @@
       </label>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary">Lưu</button>
+      <button class="btn btn-primary" @click="this.window.location='localhost:3001'">Lưu</button>
       <button
         v-if="bookLocal.id"
         type="button"
@@ -103,7 +103,7 @@ export default {
         .string()
         .required("Tên phải có giá trị.")
         .min(2, "Tên phải ít nhất 2 ký tự.")
-        .max(50, "Tên có nhiều nhất 50 ký tự."),
+        .max(150, "Tên có nhiều nhất 150 ký tự."),
       author: yup.string().required("Tác giả không được bỏ trống"),
       supplier: yup.string().required("Nhà cung cấp không được bỏ trống"),
       publishing: yup.string().required("Nhà sản xuất không được bỏ trống"),

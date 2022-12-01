@@ -28,26 +28,46 @@
 </template>
 
 <script>
-// import { userService } from "@/services/login.service";
-import axios from "axios";
+import { userService } from "@/services/login.service";
+
 export default {
   data() {
     return {
-      username: "",
-      password: "",
+      login:null
     };
   },
   methods: {
-    async Register() {
-      const data = { username: this.username, password: this.password };
-      //   console.log(data);
-      axios
-        .post("http://localhost:3003/login", data)
-        .then((res) => console.log(res))
-        .catch((err) => {
-          console.log(err);
-        });
+    async Register(login) {
+        // console.log(this.name)
+        try {
+          const login  = {...this}
+          const name = login.name
+          const username = login.username
+          const email = login.email
+          const password = login.password
+          const h = {name,username,email,password};
+          await userService.login(h)
+
+        } catch (error) {
+          console.log(error)
+        }
+        this.$router.push({name:'login'})
     },
+    created() {
+      this.login = {
+        // ...this.name,
+        // ...this.username,
+        // ...this.email,
+        // ...this.password,
+        name:"",
+        username:"",
+        email:'',
+        password:'',
+
+      }
+      
+  
+  }
   },
 };
 </script>
