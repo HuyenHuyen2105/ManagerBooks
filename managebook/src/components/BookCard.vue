@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card">
     <div class="p-1">
       <strong>Tên:</strong>
       {{ book.name }}
@@ -8,9 +8,9 @@
       <strong>Hình ảnh:</strong>
       <!-- <div class="images" v-viewer.static="{ inline: true }">
         <img v-for="src in images" :src="src" :key="src" />
-
       </div> -->
-    {{book.img}}
+      <img :src="('http://localhost:3003/' + book.img)" class="img_anh" />
+    
     </div>
     <div class="p-1">
       <strong>Tác giả:</strong>
@@ -51,3 +51,14 @@ export default {
   // },
 };
 </script>
+<style>
+.img_anh{
+  width: 200px;
+  border-radius: 10px;
+  transition: all 0.25s linear;
+}
+.img_anh:hover{
+  transform:scale(2.5);
+  z-index: 99;
+}
+</style>

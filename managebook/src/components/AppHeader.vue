@@ -1,4 +1,9 @@
 <template>
+  <header>
+    <a href="/">Trang chủ</a>
+    <a href="/register">Đăng kí</a>
+    <a href="/login">Đăng nhập</a>
+  </header>
   <nav class="navbar navbar-expand navbar-dark bg-dark img-book">
     <a href="/" class="navbar-brand book">
       <div class="typed-animation">
@@ -21,6 +26,20 @@
 .book {
   display: inline-block;
   font-size: 40px;
+}
+header{
+  width: 100%;
+  background-color:#000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 99;
+}
+header a {
+  text-decoration: none;
+  color:#20E3B2;
+  margin-left: 200px;  
 }
 .item {
   font-size: 20px;

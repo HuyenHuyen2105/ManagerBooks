@@ -26,6 +26,8 @@ export default {
   },
   methods: {
     async onAddBook(book) {
+      let img = './img/'+ book.img.name
+       book = {...book,img}
         try{
           await bookService.create(book)
         }catch(err){
@@ -35,6 +37,7 @@ export default {
       }
     },
   created() {
+    
     this.book = {
       name:"",
       img:"",

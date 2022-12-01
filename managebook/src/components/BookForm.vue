@@ -112,7 +112,7 @@ export default {
     return {
       // Props are supposed to be immutable, therefore create
       // a local variable bookLocal and bind it to the form
-      bookLocal: { ...this.book, favorite: !!this.book.favorite },
+      bookLocal: { ...this.book,favorite: !!this.book.favorite },
       contactFormSchema,
     };
   },
